@@ -1,0 +1,8 @@
+<!--this is the index.html-->
+
+{% extends "catalog.html" %}
+
+{% block content %}
+<h1>Welcome to Hobbietat</h1>
+{% endblock %}
+

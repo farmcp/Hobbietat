@@ -1,0 +1,282 @@
+#navigation{
+/*    width:900px;*/
+    width:100%;
+    height: auto;
+/*    background-color:#98AC5E;*/
+    background-color:#7CA0C7;
+    text-align:middle;
+
+    /*border radius - for different browsers*/
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -khtml-border-radius:5px;
+    border-radius:5px;
+    
+}
+
+#navigation ul{
+    list-style:none;
+}
+
+#navigation ul li{
+    float: left;
+    margin-left:25px;
+    margin-right:15px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+#navigation ul li a{
+/*    color:white;
+    font-weight:bold;
+    text-decoration: underline;*/
+    text-decoration:none;
+    display: block;
+    width:6em;
+    padding:0 0.5em;
+    font-weight: bold;
+    color:black;
+/*    border-bottom:0.5em solid white;*/
+    color:white;
+
+}
+
+#navigation ul li a:hover{
+    color:#417690;
+/*    background-color:white;*/
+    text-decoration:none;
+/*    border-color: #fa3;*/
+    border-color:#417690;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-size: medium;
+}
+
+html, body{
+    background-color:white;
+}
+
+.cb{
+    clear:both;
+}
+
+.fr{
+    float:right;
+}
+
+.fl{
+    float:left;
+}
+
+.bn{
+    border:none;
+}
+
+#main{
+    margin: 0 auto;
+    width: 950px;
+
+    background-color:White;
+}
+
+.bannerIEPadder, .sidebarIEPadder, .contentIEPadder{
+    padding:10px;
+}
+
+#banner{
+    /*width: 900px;*/
+    width:100%;
+    height: 50px;
+/*    background-color:#417690;*/
+    color:#417690;
+    font-size:30px;
+    font-weight:bold;
+    position:relative;
+}
+
+div.cart_box{
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-size:medium;
+    font-size:12px;
+
+}
+
+div.cart_box a{
+    color: #417690;
+}
+
+#sidebar{
+    width:200px;
+    float:left;
+}
+#content{
+    width:100%;
+    float:left;
+    background-color:#fff;
+    border-width:1px;
+    border-style:solid;
+    border-bottom-color:#aaa;
+    border-right-color:#aaa;
+    border-top-color:#ddd;
+    border-left-color:#ddd;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+#footer{
+    clear:both;
+    /*background-color:#417690;*/
+    color:Black;
+    text-align:center;
+    border-top: 1px solid grey;
+
+}
+a.skip_link{
+    position:absolute;
+    left:-1000px;
+    top:-1000px;
+}
+
+a {
+    color:#417690;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+a:hover {
+    /*text-decoration: underline;*/
+    color: #7CA0C7;
+    
+}
+
+/*category page styles*/
+
+div.product_thumbnail {
+    text-align:center;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 5px;
+    margin-bottom:15px;
+    vertical-align:middle;
+
+    border-width:1px;
+    border-style:solid;
+    border-bottom-color:#aaa;
+    border-right-color:#aaa;
+    border-top-color:#ddd;
+    border-left-color:#ddd;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    padding: 3px;
+}
+
+
+/*product page styles*/
+
+div.product_image{
+    display:inline-block;
+    float:left;
+    padding: 0 20px 20px 0;
+    height: 200px;
+    width: 200px;
+    vertical-align:middle;
+    position:relative;
+    text-align:center;
+}
+
+/*Style for django error messages*/
+ul.errorlist{
+    background-color:Red; color:white;
+}
+
+/*styles for shopping cart page*/
+
+table#shopping_cart{
+    width:100%;
+    border-collapse:collapse;
+    color:#616161;
+}
+
+h1, caption{
+    text-align:left;
+    font-size:x-large;
+    margin-bottom:15px;
+    color:#7ca0c7;
+}
+
+th, td{
+    text-align:left;
+    padding: 3px;
+
+}
+
+thead th{
+    color:white;
+    background-color: #616161;
+}
+
+tfoot th{
+    height:40px;
+
+}
+
+table#shopping_cart th.right, td.right{
+    text-align:right;
+    border:none;
+}
+
+a.cart{
+    color:#7ca0c7;
+}
+
+h3{
+    background-color:#417690;
+    color:white;
+    padding:3px;
+    margin-bottom:6px;
+    
+    /*rounded corners*/
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    
+}
+
+ul#categories{
+    list-style:none;
+}
+
+ul#categories li{
+    font-weight:bold;
+    color:#616161;
+}
+
+ul#categories li a{
+    text-decoration:underline;
+}
+
+div#footer a{
+    color:Light Grey;
+    font-size:small;
+    font-weight:normal;
+    margin-right:10px;
+}
+
+.flatpage_style{
+    font-size:12;
+    font-weight:normal;
+    color:#7ca0c7;
+}
+
