@@ -7,6 +7,15 @@ GOOGLE_CHECKOUT_URL='https://sandbox.google.com/checkout/api/checkout/v2/merchan
 
 CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 
+#configuration for authorize.net
+AUTHNET_POST_URL = 'test.authorize.net'
+AUTHNET_POST_PATH = '/gateway/transact.dll'
+AUTHNET_LOGIN = '4e8c87XF9C'
+AUTHNET_KEY = '99kCkk6Fk729TUGQ'
+
+#SSL Enabling
+ENABLE_SSL=False
+
 # Django settings for ecomstore project.
 
 #BEFORE LAUNCH: SET DEBUG TO FALSE
@@ -111,6 +120,9 @@ MIDDLEWARE_CLASSES = (
 
     #flatpages middleware
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+
+    #SSL settings
+    'ecomstore.SSLMiddleware.SSLRedirect',
     
 
 )
