@@ -38,7 +38,7 @@ def _create_google_checkout_request(request):
     #send the cart in xml to the url that's specified
     req=Request(url=url, data=cart)
     auth_header = "Basic %s " % authorization_value
-    print auth_header
+
     req.add_header("Authorization", auth_header)
     req.add_header('Content-Type', 'application/xml; charset=UTF-8')
     req.add_header('Accept', 'application/xml; charset=UTF-8')

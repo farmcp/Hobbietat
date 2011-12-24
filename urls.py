@@ -5,6 +5,8 @@ import os
 #get the current path of the project: similar to saying "/Users/christopherfarm/Desktop/ecomstore/"
 CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 
+#do i have to include this to get the url patterns for checkout?
+#from ecomstore.checkout.urls import urlpatterns
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -23,6 +25,7 @@ urlpatterns = patterns('',
                            url(r'^admin/', include(admin.site.urls)),
                        (r'^', include('catalog.urls')),
                        (r'^cart/$', include('cart.urls')),
+
      
 )
 

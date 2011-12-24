@@ -1,0 +1,18 @@
+{% extends "catalog.html" %}
+{% load catalog_filters %}
+
+{% block content %}
+<table id="receipt">
+  <caption> Your order has been placed!<br/><br/>
+  </caption>
+
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th class="right" scope="col">Total</th>
+    </tr>
+  </thead>
+
+</table>

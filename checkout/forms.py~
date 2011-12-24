@@ -47,8 +47,8 @@ def cardLuhnChecksumIsValid(card_number):
 
 
 class CheckoutForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super(CheckoutForm, self).__init__(*args, **kwargs)
+    def __init__(self, *args, *kwargs):
+        super(CheckoutForm, self).__init__(*args, *kwargs)
         #override default attributes
         
         for field in self.fields:
