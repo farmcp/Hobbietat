@@ -5,13 +5,15 @@ from ecomstore.checkout.forms import CheckoutForm
 from ecomstore.checkout import authnet
 from ecomstore import settings
 #from django.core import urlresolvers
-from django.core.urlresolvers import reverse
+from django.core import urlresolvers
 import urllib
+import ecomstore.checkout
 
 #change this code if you change the 3rd party processor
 def get_checkout_url(request):
     #return google_checkout.get_checkout_url(request)
-     return reverse('checkout')
+     print urlresolvers.reverse('checkout')
+     return urlresolvers.reverse('checkout')
 
 def process(request):
     #Transaction results

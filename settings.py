@@ -10,8 +10,11 @@ CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 #configuration for authorize.net
 AUTHNET_POST_URL = 'test.authorize.net'
 AUTHNET_POST_PATH = '/gateway/transact.dll'
-AUTHNET_LOGIN = '4e8c87XF9C'
-AUTHNET_KEY = '99kCkk6Fk729TUGQ'
+AUTHNET_LOGIN = '77Z3dfuTG'
+
+#AUTHNET_LOGIN = 'hobbietat54'
+AUTHNET_KEY = '68xznp67HaB529ZF'
+
 
 #SSL Enabling
 ENABLE_SSL=False
