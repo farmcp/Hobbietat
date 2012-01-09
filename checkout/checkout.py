@@ -41,6 +41,8 @@ def process(request):
         results = {'order_number':0,'message':'There is a problem with your credit card.'}
     if response[0] == ERROR or response[0] == HELD_FOR_REVIEW:
         results = {'order_number':0,'message':'Error processing your order.'}
+    print results
+    print response[0]
     return results
 
 def create_order(request, transaction_id):

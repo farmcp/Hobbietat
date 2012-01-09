@@ -9,6 +9,7 @@
 {% endif %}
 
 <form action="." method="post">
+  {% csrf_token %}
   <fieldset class ="checkout">
     <legend>Contact Info</legend>
     <table>

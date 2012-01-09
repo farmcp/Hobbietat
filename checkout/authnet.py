@@ -24,6 +24,6 @@ def do_auth_capture(amount='0.00', card_num=None, exp_date=None, card_cvv=None):
 
     post_url = settings.AUTHNET_POST_URL
     post_path = settings.AUTHNET_POST_PATH
-    cn = httplib.HTTPSConncetion(post_url,httplib.HTTPS_PORT)
+    cn = httplib.HTTPSConnection(post_url,httplib.HTTPS_PORT)
     cn.request('POST',post_path, params, headers)
     return cn.getresponse().read().split(delimiter)
