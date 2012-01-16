@@ -275,10 +275,11 @@ a.cart{
 }
 
 h3{
-    background-color:#417690;
+/*    background-color:#417690;*/
     color:white;
     padding:3px;
     margin-bottom:6px;
+    background-color:#7ca0c7;
     
     /*rounded corners*/
     -moz-border-radius:5px;
