@@ -1,3 +1,27 @@
+table#register{
+    width:100%;
+}
+
+table#register th, td{
+    vertical-align:top;
+}
+
+fieldset.my_account{
+    padding:10px;
+}
+
+fieldset.my_account legend{
+    font-weight:bold;
+}
+
+fieldset.my_account ul{
+    list-style:none;
+}
+
+fieldset.my_account ul li{
+    margin-bottom:5px;
+}
+
 fieldset.checkout{
     padding-bottom:15px;
     margin-bottom: 15px;

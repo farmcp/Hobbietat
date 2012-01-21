@@ -52,6 +52,10 @@ def create_order(request, transaction_id):
     order.transaction_id = transaction_id
     order.ip_address = request.META.get('REMOTE_ADDR')
     order.user = None
+    #link to user account
+    if request.user.is_authenticated():
+         order.user = request.user
+
     order.status = Order.SUBMITTED
     order.save()
     

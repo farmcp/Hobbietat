@@ -7,6 +7,9 @@ GOOGLE_CHECKOUT_URL='https://sandbox.google.com/checkout/api/checkout/v2/merchan
 
 CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 
+#add profile model
+AUTH_PROFILE_MODULE = 'accounts.userprofile'
+
 #configuration for authorize.net
 AUTHNET_POST_URL = 'test.authorize.net'
 AUTHNET_POST_PATH = '/gateway/transact.dll'
@@ -14,6 +17,9 @@ AUTHNET_LOGIN = '77Z3dfuTG'
 
 #AUTHNET_LOGIN = 'hobbietat54'
 AUTHNET_KEY = '68xznp67HaB529ZF'
+
+#Login redirect for the user accounts
+LOGIN_REDIRECT_URL = '/accounts/my_account'
 
 
 #SSL Enabling
@@ -154,7 +160,8 @@ INSTALLED_APPS = (
     'ecomstore.catalog', #code for the models of the products and categories
     'ecomstore.utils', #add the utility app - this allows developer to use globally defined variables
     'ecomstore.cart', #add the cart app - allows us to keep track of the cart items that a user has
-    'ecomstore.checkout', #add the checkout app - currently hooks into google checkout
+    'ecomstore.checkout', #add the checkout app - currently implemented authorize.net
+    'ecomstore.accounts', #add the accounts app - will allow people to store profile information
 
     
 #    'raven.contrib.django', #log for the django database when something goes wrong - uses django logging?
