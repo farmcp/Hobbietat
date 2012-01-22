@@ -45,8 +45,9 @@ fieldset.checkout table th{
 }
 
 fieldset.checkout input{
-    font-family:Courier;
-    font-size:Large;
+/*    font-family:Courier;*/
+/*    font-size:Large;*/
+    font-size:13px;
 }
 
 table#receipt{
