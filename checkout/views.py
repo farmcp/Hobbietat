@@ -8,6 +8,7 @@ from ecomstore.checkout.models import Order, OrderItem
 from ecomstore.checkout import checkout
 from ecomstore.cart import cart
 from django.core.context_processors import csrf
+from ecomstore.accounts import profile
 
 
 # Create your views here.
@@ -31,16 +32,19 @@ def show_checkout(request, template_name='checkout/checkout.html'):
                 print request.session['order_number']
                 return HttpResponseRedirect(receipt_url)
 
-               
-
         else:
             error_message = 'Correct the errors below'
+            if request.user.is_authenticated():
+                user_profile = profile.retrieve(request)
+                form = CheckoutForm(instance=user_profile)
+            else:
+                form = CheckoutForm()
+                
     else:
         form = CheckoutForm()
     page_title = 'Checkout'
     return render_to_response(template_name, locals(), context_instance= RequestContext(request))
 
-##Currently this doesn't seem to be running
 def receipt(request, template_name='checkout/receipt.html'):
     order_number = request.session.get('order_number','')
     print 'this is receipt order number: ' + str(order_number)

@@ -1,5 +1,9 @@
 {% load catalog_tags %}
 
 {% with cart_item_count as cart_count %}
-<a href="{% url show_cart %}"> Shopping Cart <br/>{{cart_count}} Item{{cart_count|pluralize}}</a>
+<div>
+  <a href="{% url show_cart %}"> Shopping Cart ({{cart_count}} Item{{cart_count|pluralize}})</a>
+</div>
+
 {% endwith %}
+

@@ -162,13 +162,18 @@ div.cart_box{
     top:10px;
     right:10px;
     font-size:medium;
-    font-size:12px;
-
+    font-size:14px;
+    text-align:right;
 }
 
 div.cart_box a{
     color: #417690;
 }
+div.cart_box a:hover{
+
+    color:grey;
+}
+
 
 #sidebar{
     width:200px;

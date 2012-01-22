@@ -8,11 +8,21 @@
     <div class="bannerIEPadder">
       <div class="cart_box">
 	{% cart_box request %}
+	{% if request.user.is_authenticated %}
+	<a href="{% url django.contrib.auth.views.logout %}">Logout</a>
+	<a href="/accounts/my_account/"> (Account Info)</a>
+	{% else %}
+	<a href="{% url django.contrib.auth.views.login %}">Login</a>
+	{% endif %}
+
       </div>
-      <a href="/"> Hobbietat</a>
+      <a href="/">Hobbietat</a>
+      
     </div>
   </div>
-  <div style="float:right;">[search box goes here]</div>
+  <div style="float:right;">[search box goes here]
+    
+  </div>
   <div id="navigation">
     <div class="navIEPadder">
       <!--navigation tabs at the top of each page -->

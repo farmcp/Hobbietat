@@ -51,7 +51,7 @@ class Order (BaseOrderInfo):
     transaction_id = models.CharField(max_length=20)
 
     
-
+    @models.permalink
     def get_absolute_url(self):
         return ('order_details', (), {'order_id':self.id})
 
