@@ -1,5 +1,5 @@
 {% extends "catalog.html" %}
-
+{% load checkout_tags %}
 {% block content %}
 <h1>Edit Order Information</h1>
 {{ response }}
@@ -11,9 +11,41 @@
 
 <form action="." method="post">
  {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
+  
+    <!--{{ form.as_table }}-->
+    <fieldset class="checkout">
+      <legend>Contact Info</legend>
+      <table>
+	{% form_table_row form.email %}
+	{% form_table_row form.phone %}
+      </table>
+    </fieldset>
+     <fieldset class="checkout">
+       <legend>Shipping Info</legend>
+       <table>
+	 {% form_table_row form.shipping_name %}
+	 {% form_table_row form.shipping_address1 %}
+	 {% form_table_row form.shipping_address2 %}
+	 {% form_table_row form.shipping_city %}
+	 {% form_table_row form.shipping_state %}
+	 {% form_table_row form.shipping_zip %}
+	 {% form_table_row form.shipping_country %}
+       </table>
+     </fieldset>
+     
+     <fieldset class="checkout">
+       <legend>Billing Info</legend>
+       <table>
+	 {% form_table_row form.billing_name %}
+	 {% form_table_row form.billing_address1 %}
+	 {% form_table_row form.billing_address2 %}
+	 {% form_table_row form.billing_city %}
+	 {% form_table_row form.billing_state %}
+	 {% form_table_row form.billing_zip %}
+	 {% form_table_row form.billing_country %}
+       </table>
+     </fieldset>
+ 
   <table>
     <tr>
       <th colspan="2">
