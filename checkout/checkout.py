@@ -40,6 +40,12 @@ def process(request):
     b_country = postdata.get('billing_country','')
     u_email = postdata.get('email','')
     u_phone = postdata.get('phone','')
+    s_name = postdata.get('shipping_name','')
+    s_address = postdata.get('shipping_address1','')
+    s_city = postdata.get('shipping_city','')
+    s_state = postdata.get('shipping_state','')
+    s_zip = postdata.get('shipping_zip','')
+    s_country = postdata.get('shipping_country','')
 
     results = {}
 
@@ -55,7 +61,13 @@ def process(request):
                                        bill_zip=b_zip,
                                        bill_country=b_country,
                                        email = u_email,
-                                       phone = u_phone)
+                                       phone = u_phone,
+                                       ship_name = s_name,
+                                       ship_address = s_address,
+                                       ship_city = s_city,
+                                       ship_state = s_state,
+                                       ship_zip=s_zip,
+                                       ship_country = s_country)
     if response[0] == APPROVED:
         transaction_id = response[6]
         order = create_order(request, transaction_id)
