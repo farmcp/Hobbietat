@@ -22,6 +22,7 @@ def show_checkout(request, template_name='checkout/checkout.html'):
         postdata = request.POST.copy()
         form = CheckoutForm(postdata)
         if form.is_valid():
+            #process the credit card with the data that's posted to the server - billing information
             response = checkout.process(request)
             order_number = response.get('order_number',0)
             print 'this is the order number: ' + str(order_number)

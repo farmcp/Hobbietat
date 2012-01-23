@@ -21,6 +21,8 @@ def process(request):
     DECLINED = '2'
     ERROR = '3'
     HELD_FOR_REVIEW = '4'
+    
+    #get the data from the post request
     postdata = request.POST.copy()
     card_num = postdata.get('credit_card_number','')
     exp_month = postdata.get('credit_card_expire_month','')
@@ -28,11 +30,28 @@ def process(request):
     exp_date = exp_month + exp_year
     cvv = postdata.get('credit_card_cvv','')
     amount = cart.cart_subtotal(request)
+
+    #get data about the customer
+    b_name = postdata.get('billing_name','')
+    b_address = postdata.get('billing_address1','')
+    b_city = postdata.get('billing_city','')
+    b_state = postdata.get('billing_state','')
+    b_zip = postdata.get('billing_zip','')
+    b_country = postdata.get('billing_country','')
+
     results = {}
+
+    #capture the data and send to authorize.net
     response = authnet.do_auth_capture(amount=amount,
                                        card_num=card_num,
                                        exp_date=exp_date,
-                                       card_cvv=cvv)
+                                       card_cvv=cvv,
+                                       bill_name=b_name,
+                                       bill_address=b_address,
+                                       bill_city=b_city,
+                                       bill_state=b_state,
+                                       bill_zip=b_zip,
+                                       bill_country=b_country)
     if response[0] == APPROVED:
         transaction_id = response[6]
         order = create_order(request, transaction_id)

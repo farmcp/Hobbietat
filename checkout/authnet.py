@@ -2,7 +2,7 @@ from ecomstore import settings
 import httplib
 import urllib
 
-def do_auth_capture(amount='0.00', card_num=None, exp_date=None, card_cvv=None):
+def do_auth_capture(amount='0.00', card_num=None, exp_date=None, card_cvv=None,bill_name=None,bill_address=None,bill_city=None, bill_state=None,bill_zip=None,bill_country=None):
     delimiter = '|'
     raw_params = {
         'x_login':settings.AUTHNET_LOGIN,
@@ -15,7 +15,13 @@ def do_auth_capture(amount='0.00', card_num=None, exp_date=None, card_cvv=None):
         'x_delim_char':delimiter,
         'x_relay_response':'FALSE',
         'x_delim_data':'TRUE',
-        'x_card_code':card_cvv
+        'x_card_code':card_cvv,
+        'x_first_name':bill_name,
+        'x_address':bill_address,
+        'x_city':bill_city,
+        'x_state':bill_state,
+        'x_zip':bill_zip,
+        'x_country':bill_country
         }
 
     params = urllib.urlencode(raw_params)
