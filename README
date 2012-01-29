@@ -1,6 +1,8 @@
 Requires installation of Django
+________________________________
 
 
 Requires installation of PIL (using homebrew):
-$ brew install pil
-$ ln -s /usr/local/Cellar/pil/1.1.7/lib/python2.6/site-packages/PIL /Library/Python/2.6/site-packages/PIL
+_______________________________________________
+     $ brew install pil
+     $ ln -s /usr/local/Cellar/pil/1.1.7/lib/python2.6/site-packages/PIL /Library/Python/2.6/site-packages/PIL
