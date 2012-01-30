@@ -1,5 +1,6 @@
 import os
 
+
 #google checkout global variables
 GOOGLE_CHECKOUT_MERCHANT_ID='971361175775308'
 GOOGLE_CHECKOUT_MERCHANT_KEY='V2LsVaMXIs93TPlfvMlI6Q'
@@ -73,7 +74,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(CURRENT_PATH,'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.

@@ -9,11 +9,12 @@
 
 
 {% for p in products %}
-<div class = "product_thumbnail">
+<!--<div class = "product_thumbnail">
   <a href="{{p.get_absolute_url}}">
     <img src="{{MEDIA_URL}}images/products/thumbnails/{{p.image}}" alt="{{p.name}}" class = "bn"/><br/>{{p.name}}
   </a>
-</div>
+</div>-->
+{% include 'tags/thumbnail.html' %}
 {% endfor %}
 
 {% endblock %}

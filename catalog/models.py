@@ -1,5 +1,5 @@
 from django.db import models
-
+#from PIL import Image
 # Create your models here.
 
 ##
@@ -72,7 +72,10 @@ class Product(models.Model):
     #old price can have a blank field because it doesn't need to have a value
     old_price=models.DecimalField(max_digits=9, decimal_places=2, blank=True, default=0.00)
     
-    image=models.CharField(max_length=50)
+#remove this since we are changing the image    image=models.CharField(max_length=50)
+    image = models.ImageField(upload_to='images/products/main')
+    thumbnail = models.ImageField(upload_to='images/products/thumbnails')
+    image_caption = models.CharField(max_length=200)
     is_active=models.BooleanField(default=True)
     is_bestseller=models.BooleanField(default=False)
     is_featured=models.BooleanField(default=False)
