@@ -1,4 +1,4 @@
-Requires installation of Django
+Requires installation of Django and MySQL - requires MySQLdb
 
 
 Requires installation of PIL (using homebrew):
