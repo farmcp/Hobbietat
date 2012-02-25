@@ -229,7 +229,8 @@ div.product_thumbnail {
     float: left;
     width: 150px;
     height: 150px;
-    margin-right: 5px;
+    margin-right: 14px;
+    margin-left: 14px;
     margin-bottom:15px;
     vertical-align:middle;
 

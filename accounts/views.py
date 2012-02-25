@@ -59,7 +59,7 @@ def order_info(request, template_name="registration/order_info.html"):
         if form.is_valid():
             profile.set(request)
             url = urlresolvers.reverse('my_account')
-        return HttpResponseRedirect(url)
+            return HttpResponseRedirect(url)
     else:
         user_profile = profile.retrieve(request)
         form = UserProfileForm(instance=user_profile)

@@ -13,6 +13,8 @@
 	<a href="/accounts/my_account/"> (Account Info)</a>
 	{% else %}
 	<a href="{% url django.contrib.auth.views.login %}">Login</a>
+	 / 
+	<a href="/accounts/register/">Register an Account</a>
 	{% endif %}
 
       </div>
@@ -20,7 +22,12 @@
       
     </div>
   </div>
-  <div style="float:right;">[search box goes here]
+  <div style="float:right;"><!--search box goes here -->
+   <!-- <form method="get" action="/search/results/">
+      <label for="q"/>
+      <input type="text" name="q" id="q"/>
+      <input type="Submit" value="Search"/>
+    </form>-->
     
   </div>
   <div id="navigation">

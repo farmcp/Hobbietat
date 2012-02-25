@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 #from PIL import Image
 # Create your models here.
 
@@ -6,7 +8,17 @@ from django.db import models
 #create categories for each of the products. each will have a name a description and some other properties.
 #categoies can consist of - heads, skirts, onshore lures, onshore skirts, onshore heads, deep sea hooks, shore hooks, line, etc.
 ##
+
+#class ActiveCategoryManager(models.Manager):
+#    def get_query_set(self):
+#        return super(ActiveCategoryManager, self).get_query_set().filter(is_active=True)
+
+
 class Category(models.Model):
+    #hook up the activecategorymanager
+    #objects=models.Manager()
+    #active=ActiveCategoryManager()
+
     name = models.CharField(max_length=50, unique=True)
     description = models.TextField()
     slug = models.SlugField(max_length=50, unique=True, help_text='Unique value for product page URL, created from name.')
@@ -58,9 +70,15 @@ class FishingStyle(models.Model):
     def __unicode__(self):
         return self.style
 
-
+#class ActiveProductManager(models.Manager):
+#    def get_query_set(self):
+#        return super(ActiveProductManager, self).get_query_set().filter(is_active=True)
 
 class Product(models.Model):
+    #hook up the ActiveProductManager
+    #objects=models.Manager()
+    #active = ActiveProductManager()
+
     name = models.CharField(max_length=255, unique = True)
     slug = models.SlugField(max_length=255, unique = True, help_text='unique value for product page url, created by name.')
     brand = models.CharField(max_length=255)
