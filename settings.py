@@ -29,7 +29,7 @@ ENABLE_SSL=False
 # Django settings for ecomstore project.
 
 #BEFORE LAUNCH: SET DEBUG TO FALSE
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
