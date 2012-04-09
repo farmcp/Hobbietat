@@ -37,7 +37,7 @@ urlpatterns = patterns('',
 #use for the previews app
 urlpatterns += patterns('', 
                         (r'^catalog/$', 'preview.views.home'),
-                        (r'^static/(?P<path>.*)$', 'django.views.static.serve', 
-                         {'document_root' :os.path.join(CURRENT_PATH, 'static')}),
+#                        (r'^static/(?P<path>.*)$', 'django.views.static.serve', 
+#                         {'document_root' :os.path.join(CURRENT_PATH, 'static')}),
 )
 handler404 = 'ecomstore.views.file_not_found_404'
