@@ -13,6 +13,7 @@ AUTH_PROFILE_MODULE = 'accounts.userprofile'
 
 #configuration for authorize.net
 AUTHNET_POST_URL = 'test.authorize.net'
+#AUTHNET_POST_URL = 'secure.authorize.net'
 AUTHNET_POST_PATH = '/gateway/transact.dll'
 AUTHNET_LOGIN = '77Z3dfuTG'
 
