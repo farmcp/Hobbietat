@@ -76,7 +76,9 @@ class FishingStyle(models.Model):
 
 class Product(models.Model):
     #hook up the ActiveProductManager
-    #objects=models.Manager()
+    #models.Manager() will allow you to run SELECT queries on Products =>
+    #i.e. SELECT COUNT(*) FROM products WHERE quantity > x AND size = y
+    objects=models.Manager()
     #active = ActiveProductManager()
 
     name = models.CharField(max_length=255, unique = True)
@@ -90,7 +92,7 @@ class Product(models.Model):
     #old price can have a blank field because it doesn't need to have a value
     old_price=models.DecimalField(max_digits=9, decimal_places=2, blank=True, default=0.00)
     
-#remove this since we are changing the image    image=models.CharField(max_length=50)
+    #remove this since we are changing the image    image=models.CharField(max_length=50)
     image = models.ImageField(upload_to='images/products/main')
     thumbnail = models.ImageField(upload_to='images/products/thumbnails')
     image_caption = models.CharField(max_length=200)

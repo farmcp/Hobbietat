@@ -4,17 +4,52 @@
 
 {% block content %}
 
-<h1>{{c.name}}</h1>
-{{c.description}}
+<!--<h1>{{c.name}}</h1>
+{{c.description}}-->
 
-
-{% for p in products %}
-<!--<div class = "product_thumbnail">
-  <a href="{{p.get_absolute_url}}">
-    <img src="{{MEDIA_URL}}images/products/thumbnails/{{p.image}}" alt="{{p.name}}" class = "bn"/><br/>{{p.name}}
-  </a>
-</div>-->
+{% if products_12 %}
+<h1>Size 4 Inch</h1>
+{% for p in products_12 %}
 {% include 'tags/thumbnail.html' %}
 {% endfor %}
+{% endif %}
+
+{% if products_9 %}
+<h1>Size 9 Inch</h1>
+{% for p in products_9 %}
+{% include 'tags/thumbnail.html' %}
+{% endfor %}
+{% endif %}
+
+
+{% if products_7 %}
+<h1>Size 7 Inch</h1>
+{% for p in products_7 %}
+{% include 'tags/thumbnail.html' %}
+{% endfor %}
+{% endif %}
+
+{% if products_5 %}
+<h1>Size 5 Inch</h1>
+{% for p in products_5 %}
+{% include 'tags/thumbnail.html' %}
+{% endfor %}
+{% endif %}
+
+
+{% if products_4 %}
+<h1>Size 4 Inch</h1>
+{% for p in products_4 %}
+{% include 'tags/thumbnail.html' %}
+{% endfor %}
+{% endif %}
+
+
+<!--
+{% for p in products %}
+
+{% include 'tags/thumbnail.html' %}
+{% endfor %}
+-->
 
 {% endblock %}

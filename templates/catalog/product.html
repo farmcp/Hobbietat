@@ -3,12 +3,13 @@
 
 {% block content %}
 
+<!--holder for the product image-->
 <div class="product_image">
-
   <img src = "{{ p.image.url }}" alt="{{p.name}}"/><br/>
-  {{ p.image_caption }}
+  <div style="font-size:10px">{{ p.image_caption }}</div>
 </div>
 
+<!-- description of the product-->
 <h1>{{p.name}}</h1>
 {% if p.sale_price %}
 <b>Now: ${{p.price}}</b>
@@ -19,7 +20,8 @@ Was:<del>$ {{p.old_price}}</del><br/>
 <b>Price: ${{p.price}}</b><br/>
 {% endif %}
 Brand: <em>{{p.brand}}</em><br/>
-SKU: {{p.sku}}
+SKU #: {{p.sku}}<br/>
+Size: {{p.size}}
 
 {% comment %}In categor{{categories.count|pluralize:"y, ies"}}:
 {% for c in categories %}
@@ -27,10 +29,7 @@ SKU: {{p.sku}}
 {% if not forloop.last %}, {% endif %}
 {% endfor %}{% endcomment %}
 
-
-
-
-
+<!--POST form for method to get input-->
 <br/>
 <form method="post" action="." class="cart">
   {% csrf_token %}

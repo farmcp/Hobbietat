@@ -5,7 +5,7 @@ from ecomstore.catalog.forms import ProductAdminForm
 class ProductAdmin(admin.ModelAdmin):
     form = ProductAdminForm
 
-    list_display = ('name', 'price', 'old_price','date_created', 'date_updated','quantity',)
+    list_display = ('name', 'price', 'old_price','date_created', 'date_updated','quantity','size','sku',)
     list_display_links = ('name',)
     list_per_page = 50
     ordering = ['-date_created']

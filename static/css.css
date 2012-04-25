@@ -1,3 +1,13 @@
+/*This is for the form on the product description*/
+#id_pick_size{
+    width: 50px;
+    margin-top:5px;
+}
+#id_quantity{
+    width:45px;
+    margin-top:5px;
+}
+/*end of product description css*/
 table#register{
     width:100%;
 }
