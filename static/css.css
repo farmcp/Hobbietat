@@ -7,6 +7,13 @@
     width:45px;
     margin-top:5px;
 }
+
+#size_content{
+    width:100%;
+    float: left;
+    margin-top:5px;
+    margin-bottom: 15px;
+}
 /*end of product description css*/
 table#register{
     width:100%;
