@@ -6,7 +6,7 @@ from django.core import urlresolvers
 from ecomstore.cart import cart
 from django.http import HttpResponseRedirect
 from ecomstore.catalog.forms import ProductAddToCartForm
-
+from decimal import Decimal
 
 
 def index(request, template_name="catalog/index.html"):
@@ -17,7 +17,7 @@ def show_category(request, category_slug, template_name="catalog/category.html")
     c= get_object_or_404(Category, slug=category_slug)
     #get all the products in the category then used in the category.html template
     products_4 = c.product_set.filter(size=4)
-    products_5 = c.product_set.filter(size=5.38)
+    products_5 = c.product_set.filter(size="5.38")
     products_7 = c.product_set.filter(size=7)
     products_9 = c.product_set.filter(size=9)
     products_12 = c.product_set.filter(size=12)
