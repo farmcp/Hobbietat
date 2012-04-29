@@ -13,7 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
     #exclude=('date_created', 'date_updated',)
     
     #set up slug to be generated from product name
-    prepopulated_fields= {'slug':('name',)}
+    prepopulated_fields= {'slug':('sku',)}
 
 #register the product model with the admin site
 admin.site.register(Product, ProductAdmin)

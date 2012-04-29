@@ -81,10 +81,10 @@ class Product(models.Model):
     objects=models.Manager()
     #active = ActiveProductManager()
 
-    name = models.CharField(max_length=255, unique = True)
+    name = models.CharField(max_length=255, unique = False)
+    sku=models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique = True, help_text='unique value for product page url, created by name.')
     brand = models.CharField(max_length=255)
-    sku=models.CharField(max_length=255)
     
     #price that the product will be set at
     price=models.DecimalField(max_digits=9, decimal_places=2)
